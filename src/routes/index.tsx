@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
 import bannerAsset from "@/assets/banner.png.asset.json";
+import { trackInitiateCheckout } from "@/lib/xPixel";
 const banner = bannerAsset.url;
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -230,7 +232,7 @@ function Index() {
             ))}
           </ul>
           <button
-            onClick={() => setUpsellOpen(true)}
+            onClick={() => { trackInitiateCheckout(); setUpsellOpen(true); }}
             className="w-full rounded-xl bg-primary text-primary-foreground font-bold py-4 text-base hover:brightness-110 transition shadow-lg"
           >
             QUERO COMPLETO
@@ -286,7 +288,7 @@ function Index() {
         {/* Final CTA */}
         <section className="text-center space-y-4 pb-6">
           <button
-            onClick={() => setUpsellOpen(true)}
+            onClick={() => { trackInitiateCheckout(); setUpsellOpen(true); }}
             className="w-full rounded-xl bg-primary text-primary-foreground font-bold py-4 hover:brightness-110 transition shadow-lg"
           >
             QUERO ASSISTIR AGORA
