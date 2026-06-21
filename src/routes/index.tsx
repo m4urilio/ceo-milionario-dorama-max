@@ -76,9 +76,13 @@ function VSL() {
   }, []);
   return (
     <div className="mx-auto w-full max-w-[320px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
-      <div ref={ref} className="w-full aspect-[9/16] [&>lt-v2]:block [&_video]:!w-full [&_video]:!h-full [&_video]:!object-cover" />
+      <div
+        ref={ref}
+        className="vsl-vertical relative w-full aspect-[9/16] overflow-hidden"
+      />
     </div>
   );
+
 }
 
 function UpsellPopup({ open, onClose }: { open: boolean; onClose: () => void }) {
