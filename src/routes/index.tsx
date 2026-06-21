@@ -75,13 +75,11 @@ function VSL() {
     return () => { try { document.body.removeChild(s); } catch {} };
   }, []);
   return (
-    <div className="mx-auto w-full max-w-[320px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
-      <div
-        ref={ref}
-        className="vsl-vertical relative w-full aspect-[9/16] overflow-hidden"
-      />
+    <div className="mx-auto w-full max-w-[360px]">
+      <div ref={ref} />
     </div>
   );
+
 
 }
 
