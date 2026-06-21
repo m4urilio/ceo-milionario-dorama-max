@@ -79,6 +79,33 @@
 .notif-in { animation: slide-in-left 0.4s ease-out forwards; }
 .notif-out { animation: slide-out-left 0.4s ease-in forwards; }
 
+.vsl-phone-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #000;
+}
+
+.vsl-player-host,
+.vsl-player-host > lt-v2 {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+}
+
+.vsl-player-host iframe,
+.vsl-player-host video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background: #000;
+}
+
 @keyframes pop-in {
   from { transform: scale(0.92); opacity: 0; }
   to { transform: scale(1); opacity: 1; }

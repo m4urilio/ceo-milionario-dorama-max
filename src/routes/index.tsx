@@ -76,7 +76,9 @@ function VSL() {
   }, []);
   return (
     <div className="mx-auto w-full max-w-[360px]">
-      <div ref={ref} />
+      <div className="vsl-phone-frame">
+        <div ref={ref} className="vsl-player-host" />
+      </div>
     </div>
   );
 
