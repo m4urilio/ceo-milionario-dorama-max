@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
-import banner from "@/assets/banner.jpg";
+import bannerAsset from "@/assets/banner.png.asset.json";
+const banner = bannerAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,8 +73,8 @@ function VSL() {
     return () => { try { document.body.removeChild(s); } catch {} };
   }, []);
   return (
-    <div className="rounded-2xl overflow-hidden border border-border bg-black/40 shadow-2xl">
-      <div ref={ref} className="w-full" />
+    <div className="mx-auto w-full max-w-[320px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
+      <div ref={ref} className="w-full aspect-[9/16] [&>lt-v2]:block [&_video]:!w-full [&_video]:!h-full [&_video]:!object-cover" />
     </div>
   );
 }
