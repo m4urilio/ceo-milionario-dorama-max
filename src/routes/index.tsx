@@ -5,10 +5,6 @@ import bannerAsset from "@/assets/banner.png.asset.json";
 import { trackInitiateCheckout } from "@/lib/xPixel";
 const banner = bannerAsset.url;
 
-function openUpsell(setOpen: (v: boolean) => void) {
-  trackInitiateCheckout();
-  setOpen(true);
-}
 
 export const Route = createFileRoute("/")({
   head: () => ({
