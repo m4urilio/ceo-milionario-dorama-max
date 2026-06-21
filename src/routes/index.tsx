@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
 import bannerAsset from "@/assets/banner.png.asset.json";
 import { trackInitiateCheckout } from "@/lib/xPixel";
@@ -64,25 +64,27 @@ function Countdown() {
 }
 
 function VSL() {
-  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (!ref.current) return;
-    ref.current.innerHTML = '<lt-v2 v="d3266c0c-a826-4ef2-a207-2ac18fe53305" ct="[[]]"></lt-v2>';
     const s = document.createElement("script");
-    s.src = "https://app.litevideo.net/p.js";
+    s.src = "https://player.vimeo.com/api/player.js";
     s.async = true;
     document.body.appendChild(s);
     return () => { try { document.body.removeChild(s); } catch {} };
   }, []);
   return (
     <div className="mx-auto w-full max-w-[360px]">
-      <div className="vsl-phone-frame">
-        <div ref={ref} className="vsl-player-host" />
+      <div style={{ padding: "133.33% 0 0 0", position: "relative" }}>
+        <iframe
+          src="https://player.vimeo.com/video/1202353342?badge=0&autopause=0&player_id=0&app_id=58479"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+          title="O Ceo Milionário e a Amante Secreta"
+        />
       </div>
     </div>
   );
-
-
 }
 
 function UpsellPopup({ open, onClose }: { open: boolean; onClose: () => void }) {
