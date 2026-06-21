@@ -73,8 +73,8 @@ function VSL() {
     return () => { try { document.body.removeChild(s); } catch {} };
   }, []);
   return (
-    <div className="rounded-2xl overflow-hidden border border-border bg-black/40 shadow-2xl">
-      <div ref={ref} className="w-full" />
+    <div className="mx-auto w-full max-w-[320px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
+      <div ref={ref} className="w-full aspect-[9/16] [&>lt-v2]:block [&_video]:!w-full [&_video]:!h-full [&_video]:!object-cover" />
     </div>
   );
 }
