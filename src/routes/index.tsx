@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
-import banner from "@/assets/banner.jpg";
+import bannerAsset from "@/assets/banner.png.asset.json";
+const banner = bannerAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
