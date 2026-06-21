@@ -80,9 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "O CEO Milionário e a Amante Secreta" },
       { name: "description", content: "Assista a todos os episódios dublados. Acesso imediato por R$ 4,99." },
       { property: "og:title", content: "O CEO Milionário e a Amante Secreta" },
-      { property: "og:description", content: "Acesso imediato aos 24 episódios dublados. Pagamento único." },
+      { property: "og:description", content: "Assista a todos os episódios dublados. Acesso imediato por R$ 4,99." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "O CEO Milionário e a Amante Secreta" },
+      { name: "twitter:description", content: "Assista a todos os episódios dublados. Acesso imediato por R$ 4,99." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b86a614-ffbf-4971-bbc3-377459c1dff4/id-preview-c3366e34--383f045a-603f-4b16-ae59-193ce9a3b9f4.lovable.app-1782014823950.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5b86a614-ffbf-4971-bbc3-377459c1dff4/id-preview-c3366e34--383f045a-603f-4b16-ae59-193ce9a3b9f4.lovable.app-1782014823950.png" },
     ],
     links: [
       {
