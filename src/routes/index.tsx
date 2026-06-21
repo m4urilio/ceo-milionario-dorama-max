@@ -236,7 +236,7 @@ function Index() {
             ))}
           </ul>
           <button
-            onClick={() => setUpsellOpen(true)}
+            onClick={() => { trackInitiateCheckout(); setUpsellOpen(true); }}
             className="w-full rounded-xl bg-primary text-primary-foreground font-bold py-4 text-base hover:brightness-110 transition shadow-lg"
           >
             QUERO COMPLETO
@@ -292,7 +292,7 @@ function Index() {
         {/* Final CTA */}
         <section className="text-center space-y-4 pb-6">
           <button
-            onClick={() => setUpsellOpen(true)}
+            onClick={() => { trackInitiateCheckout(); setUpsellOpen(true); }}
             className="w-full rounded-xl bg-primary text-primary-foreground font-bold py-4 hover:brightness-110 transition shadow-lg"
           >
             QUERO ASSISTIR AGORA
