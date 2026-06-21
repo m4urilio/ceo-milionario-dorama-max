@@ -77,14 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "O CEO Milionário e a Amante Secreta" },
+      { name: "description", content: "Assista a todos os episódios dublados. Acesso imediato por R$ 4,99." },
+      { property: "og:title", content: "O CEO Milionário e a Amante Secreta" },
+      { property: "og:description", content: "Acesso imediato aos 24 episódios dublados. Pagamento único." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
