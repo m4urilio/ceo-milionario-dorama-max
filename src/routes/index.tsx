@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
-import banner from "@/assets/banner.png";
+import bannerAsset from "@/assets/banner.png.asset.json";
+const banner = bannerAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,11 +73,8 @@ function VSL() {
     return () => { try { document.body.removeChild(s); } catch {} };
   }, []);
   return (
-    <div className="mx-auto w-full max-w-[340px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
-      <div
-        ref={ref}
-        className="relative w-full aspect-[9/16] [&_lt-v2]:!absolute [&_lt-v2]:!inset-0 [&_lt-v2]:!block [&_lt-v2]:!w-full [&_lt-v2]:!h-full [&_iframe]:!absolute [&_iframe]:!inset-0 [&_iframe]:!w-full [&_iframe]:!h-full [&_video]:!absolute [&_video]:!inset-0 [&_video]:!w-full [&_video]:!h-full [&_video]:!object-cover"
-      />
+    <div className="mx-auto w-full max-w-[320px] rounded-2xl overflow-hidden border border-border bg-black shadow-2xl">
+      <div ref={ref} className="w-full aspect-[9/16] [&>lt-v2]:block [&_video]:!w-full [&_video]:!h-full [&_video]:!object-cover" />
     </div>
   );
 }
