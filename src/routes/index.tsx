@@ -2,7 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, ShieldCheck, Zap, Crown, Star, Sparkles, ChevronDown, X, Play } from "lucide-react";
 import bannerAsset from "@/assets/banner.png.asset.json";
+import { trackInitiateCheckout } from "@/lib/xPixel";
 const banner = bannerAsset.url;
+
+function openUpsell(setOpen: (v: boolean) => void) {
+  trackInitiateCheckout();
+  setOpen(true);
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
